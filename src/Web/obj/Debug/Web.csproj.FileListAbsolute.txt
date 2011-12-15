@@ -1,0 +1,7 @@
+C:\Development\rest-with-mvc\src\RestWithMvc\Web\bin\Web.dll
+C:\Development\rest-with-mvc\src\RestWithMvc\Web\bin\Web.pdb
+C:\Development\rest-with-mvc\src\RestWithMvc\Web\bin\EntityFramework.dll
+C:\Development\rest-with-mvc\src\RestWithMvc\Web\bin\EntityFramework.xml
+C:\Development\rest-with-mvc\src\RestWithMvc\Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\rest-with-mvc\src\RestWithMvc\Web\obj\Debug\Web.dll
+C:\Development\rest-with-mvc\src\RestWithMvc\Web\obj\Debug\Web.pdb

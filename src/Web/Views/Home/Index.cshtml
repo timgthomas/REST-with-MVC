@@ -1,0 +1,64 @@
+﻿@{
+	//Layout = null;
+}
+<!doctype html>
+
+<html>
+
+<head>
+	<title>REST with MVC</title>
+</head>
+
+<body>
+	<h1>REST <em>with</em> MVC</h1>
+	<p>Please enter your name:</p>
+	<input id='name' />
+	<ul>
+		<li><a href='#' id='send-get'>Get</a></li>
+		<li><a href='#' id='send-post'>Post</a></li>
+		<li><a href='#' id='send-put'>Put</a></li>
+		<li><a href='#' id='send-delete'>Delete</a></li>
+	</ul>
+	<p id='result-message'>Choose an HTTP request to send above.</p>
+	<script src='@Url.Content("~/Content/js/jquery-1.7.1.min.js")'></script>
+	<script>
+
+		(function ($) {
+
+			$('#send-get').click(function (e) {
+				e.preventDefault();
+				sendRequest('GET');
+			});
+
+			$('#send-post').click(function (e) {
+				e.preventDefault();
+				sendRequest('POST');
+			});
+
+			$('#send-put').click(function (e) {
+				e.preventDefault();
+				sendRequest('PUT');
+			});
+
+			$('#send-delete').click(function (e) {
+				e.preventDefault();
+				sendRequest('DELETE');
+			});
+
+			var sendRequest = function (method) {
+				var name = $('#name').val();
+				$.ajax({
+					url: '@Url.Action("SendRequest")',
+					type: method,
+					data: 'name=' + name,
+					success: function (data) {
+						$('#result-message').html(data.message);
+					}
+				});
+			};
+		})(jQuery)
+	
+	</script>
+</body>
+
+</html>
